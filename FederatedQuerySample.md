@@ -22,7 +22,8 @@ SELECT DISTINCT ?s ?p ?wd WHERE {
    SERVICE <http://dbpedia.org/sparql> {
             ?s ?p ?wd.
         }
-}```
+}
+```
 
 ### 動いた例
 ```PREFIX chname: <https://jpsearch.go.jp/entity/chname/>
