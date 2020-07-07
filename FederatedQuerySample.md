@@ -40,7 +40,8 @@ SELECT DISTINCT ?s ?p ?wd WHERE {
    SERVICE <http://ja.dbpedia.org/sparql> {
             ?s ?p ?wd.
         }
-}```
+}
+```
 
 
 ### 動かない　→　日本語のURIに不具合あり？
@@ -58,7 +59,8 @@ SELECT DISTINCT ?s ?p ?dbp WHERE {
    SERVICE <http://ja.dbpedia.org/sparql> {
            ?dbp ?s ?p .
         }
-}```
+}
+```
 
 
 ### 動いた
@@ -76,7 +78,8 @@ SELECT DISTINCT ?s ?p ?o WHERE {
    ?s owl:sameAs ?dbp .
    ?dbp rdfs:isDefinedBy <http://ja.dbpedia.org/> .
    ?s ?p ?o. 
-}```
+}
+```
 
 ### 動かない　→　タイムアウトが発生？
 ```PREFIX chname: <https://jpsearch.go.jp/entity/chname/>
@@ -95,7 +98,8 @@ SELECT DISTINCT ?s ?p ?o WHERE {
    SERVICE <http://ja.dbpedia.org/sparql> {
            ?dbp rdfs:label "葛飾北斎"@ja .
         }
-}```
+}
+```
  
 
 ### 動かない →　FILTERがダメ？ 
@@ -117,7 +121,8 @@ SELECT DISTINCT ?s ?p ?o WHERE {
    ?dbp rdfs:isDefinedBy <http://ja.dbpedia.org/> .
    ?s ?p ?o. 
 
-}```
+}
+```
 
 
 
@@ -139,7 +144,8 @@ SELECT DISTINCT ?s ?p ?o WHERE {
      ?dbp rdfs:isDefinedBy <http://ja.dbpedia.org/> .
      ?s ?p ?o. 
 
-}```
+}
+```
 
 ### 動いた
 ```PREFIX chname: <https://jpsearch.go.jp/entity/chname/>
@@ -159,4 +165,5 @@ SELECT DISTINCT ?s ?p ?o WHERE {
      ?dbp rdfs:isDefinedBy <http://dbpedia.org/> .
      ?s ?p ?o. 
 
-}```
+}
+```
