@@ -167,3 +167,27 @@ SELECT DISTINCT ?s ?p ?o WHERE {
 
 }
 ```
+
+## Fuseki利用
+```
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+select ?s ?link ?area ?books
+where {
+  ?s owl:sameAs ?link.
+  #Wikidataへのリンクに絞り込み
+  FILTER(regex(str(?link),"wikidata")) 
+
+  service <https://query.wikidata.org/sparql> {
+	#Wikidataから指定したトリプルを取得
+    ?link wdt:P2046 ?area ;  #面積
+          wdt:P1436 ?books . #蔵書数
+  }
+}LIMIT 10
+```
+
+## Fuseki利用
+```
+
+```
